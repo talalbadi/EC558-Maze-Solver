@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from maze_generator import generate_maze
-from maze_solver import bfs
+from maze_solver import *
 
 
 maze,start_p,goal_p=generate_maze()
