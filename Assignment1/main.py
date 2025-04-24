@@ -18,13 +18,13 @@ print(f"Time taken BFS: {end_time-start_time:.4f} ms")
 
 start_time=time.time()
 #path=astar(maze,start_p,goal_p)
-path=dfs(maze,start_p,goal_p,False)
+path=dfs(maze,start_p,goal_p,True)
 #path=bfs(maze,start_p,goal_p,True)
 end_time=time.time()
 print(f"Time taken A*: {end_time-start_time:.4f} ms")
 
 start_time=time.time()
-path=ucs(maze,start_p,goal_p,False)
+path=ucs(maze,start_p,goal_p,True)
 end_time=time.time()
 print(f"Time taken UCS: {end_time-start_time:.4f} ms")
 
