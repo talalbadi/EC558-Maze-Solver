@@ -288,10 +288,40 @@ The choice of algorithm ultimately depends on the specific requirements of the a
 
 This project demonstrates that informed search algorithms generally outperform uninformed approaches in maze navigation tasks, particularly in larger or more complex environments.
 
+## Performance with Random Endpoints
+
+In addition to testing with fixed endpoints, we also evaluated all algorithms on mazes with randomly generated start and goal positions. This provides a more representative assessment of algorithm performance across diverse maze configurations.
+
+### Random Endpoints Results
+
+![BFS Random Endpoints](images/random_endpoints/BFS_trial1.png)
+_Figure 7: BFS with random endpoints - demonstrates consistent optimal path finding regardless of endpoint placement_
+
+![DFS Random Endpoints](images/random_endpoints/DFS_trial1.png)
+_Figure 8: DFS with random endpoints - shows winding path characteristics even in different maze configurations_
+
+![A* Random Endpoints](images/random_endpoints/A_star_trial1.png)
+_Figure 9: A\* with random endpoints - maintains efficient path finding with different start/goal locations_
+
+### Observations from Random Endpoint Testing
+
+1. **Consistency across configurations**: The relative performance characteristics of each algorithm remained consistent across both fixed and random endpoint scenarios. A\* and UCS consistently found optimal paths, while DFS produced longer paths.
+
+2. **Path length variance**: With random endpoints, path lengths naturally varied based on the distance between start and goal positions, but the relative efficiency of different algorithms remained consistent.
+
+3. **Success rates**: Some algorithms (particularly Greedy Best-First Search) occasionally failed to find paths in particularly challenging maze configurations, highlighting the importance of algorithm selection based on maze characteristics.
+
+4. **Computational efficiency**: A\* and Greedy search maintained their computational advantage even with randomly placed endpoints, showing that their heuristic-guided approaches remain effective across different problem instances.
+
+The random endpoint testing confirms that the conclusions drawn from fixed endpoint testing are generalizable to various maze configurations.
+
 ## Images of Algorithm Visualizations
 
-![Algorithm Comparison](images/fixed_endpoints/algorithm_comparison.png)
-_Figure 7: Visual comparison of exploration patterns for all six algorithms on the same maze_
+![Algorithm Comparison (Fixed Endpoints)](images/fixed_endpoints/algorithm_comparison.png)
+_Figure 10: Visual comparison of exploration patterns for all six algorithms on the same maze with fixed endpoints_
+
+![Algorithm Comparison (Random Endpoints)](images/random_endpoints/BFS_trial2.png)
+_Figure 11: Example of algorithm performance on a maze with random endpoints_
 
 ## Project Structure
 
